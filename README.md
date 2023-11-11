@@ -14,7 +14,7 @@ Original App Design Project - README
 
 ### Description
 
-[Description of your app]
+This app allows users to search and browse anime to find a show that they find interesting and want to watch. Users can view more detailed information about an anime through a detailed view where they can also favorite or mark a show as watching/completed. All the watching/completed shows will be compiled in a list for the users to easily view with favorited shows pushed to the top of the list. Users can also view the top rated anime in a separate page.
 
 ### App Evaluation
 
@@ -86,7 +86,7 @@ Original App Design Project - README
 ## Wireframes
 
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="wireframe.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
