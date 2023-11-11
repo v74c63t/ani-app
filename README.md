@@ -1,4 +1,4 @@
-Original App Design Project - README Template
+Original App Design Project - README 
 ===
 
 # AnimeApp (name tbd)
@@ -18,13 +18,12 @@ Original App Design Project - README Template
 
 ### App Evaluation
 
-[Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Entertainment
+- **Mobile:** I would not necessarily say that this type of app needs to be mobile. There are indeed many web apps that serve the same purpose, but there are fewer mobile apps. This essentially serves as an alternative for people to use if they would rather use a mobile app.
+- **Story:** Users can search for any interesting shows they plan on watching next and can organize their anime list so they easily sort through and find shows.
+- **Market:** Any person who has interests in anime and watches it on a regular basis
+- **Habit:** Users would typically use this during their free time whenever they plan on watching a show. It is not necessarily something they would be constantly using it, but something they will use when they need it.
+- **Scope:** The functionality I wanted to implement should not be too difficult to implement within this timeframe even if I run into other busy assignments. The tasks builds upon what we have learned in the course with using APIs, table views, navigation, etc so it is good project to do for a capstone. It is not too simple nor too complex and if needed more functionality can be added during the development process as well. 
 
 ## Product Spec
 
@@ -32,7 +31,6 @@ Original App Design Project - README Template
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
 * Have a search page that allows users to search for shows with some query
 * Have a list of genres users can browse by (should be on the main search page)
 * Entering and searching by a query or clicking on a genre will bring the user to the search result page
@@ -45,7 +43,6 @@ Original App Design Project - README Template
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
 * Allow users to adjust the sorting criteria/number of shows shown in each page through settings on search page
 * Add all features for manga as well
 * Allow users to click on genres on show detail page to go to search page for that genre
