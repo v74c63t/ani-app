@@ -60,7 +60,7 @@ This app allows users to search and browse anime to find a show that they find i
 - [ ] Detailed View
 * Detailed view will allow users to favorite a show or mark it as watching/complete
 * Includes more detailed information about the show (all the genres, studio, etc)
-- [ ] Top Rated Screen
+- [x] Top Rated Screen
 * There is a page that allows users to view top rated shows in a table view
 - [ ] Watch/Complete List Screen
 * Users should be able to view their watch list and complete list with favorite shows being pushed towards the top of each respective list
