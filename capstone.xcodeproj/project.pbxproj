@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0AA9C62B05AC6B005FE3EB /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA9C52B05AC6B005FE3EB /* Anime.swift */; };
 		FA4D1AD92AFF220A008E0AE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1AD82AFF220A008E0AE6 /* AppDelegate.swift */; };
 		FA4D1ADB2AFF220A008E0AE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1ADA2AFF220A008E0AE6 /* SceneDelegate.swift */; };
 		FA4D1ADD2AFF220A008E0AE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1ADC2AFF220A008E0AE6 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0AA9C52B05AC6B005FE3EB /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 		FA4D1AD52AFF220A008E0AE6 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4D1AD82AFF220A008E0AE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA4D1ADA2AFF220A008E0AE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				FA4D1AD82AFF220A008E0AE6 /* AppDelegate.swift */,
 				FA4D1ADA2AFF220A008E0AE6 /* SceneDelegate.swift */,
 				FA4D1ADC2AFF220A008E0AE6 /* ViewController.swift */,
+				FA0AA9C52B05AC6B005FE3EB /* Anime.swift */,
 				FA4D1ADE2AFF220A008E0AE6 /* Main.storyboard */,
 				FACE338E2B000C41006F12C0 /* AnimeCell.swift */,
 				FA4D1AE12AFF220C008E0AE6 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACE338F2B000C41006F12C0 /* AnimeCell.swift in Sources */,
+				FA0AA9C62B05AC6B005FE3EB /* Anime.swift in Sources */,
 				FA4D1ADD2AFF220A008E0AE6 /* ViewController.swift in Sources */,
 				FA4D1AD92AFF220A008E0AE6 /* AppDelegate.swift in Sources */,
 				FA4D1ADB2AFF220A008E0AE6 /* SceneDelegate.swift in Sources */,

@@ -9,14 +9,14 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return anime.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         <#code#>
     }
     
-    
+    private var anime: [Anime] = []
 
     @IBOutlet weak var topRatedTableView: UITableView!
     override func viewDidLoad() {
