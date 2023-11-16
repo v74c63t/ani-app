@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA0AA9C62B05AC6B005FE3EB /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0AA9C52B05AC6B005FE3EB /* Anime.swift */; };
+		FA0AA9D22B05B673005FE3EB /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = FA0AA9D12B05B673005FE3EB /* Nuke */; };
 		FA4D1AD92AFF220A008E0AE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1AD82AFF220A008E0AE6 /* AppDelegate.swift */; };
 		FA4D1ADB2AFF220A008E0AE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1ADA2AFF220A008E0AE6 /* SceneDelegate.swift */; };
 		FA4D1ADD2AFF220A008E0AE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4D1ADC2AFF220A008E0AE6 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0AA9D22B05B673005FE3EB /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = capstone;
+			packageProductDependencies = (
+				FA0AA9D12B05B673005FE3EB /* Nuke */,
+			);
 			productName = capstone;
 			productReference = FA4D1AD52AFF220A008E0AE6 /* capstone.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = FA4D1ACC2AFF220A008E0AE6;
+			packageReferences = (
+				FA0AA9D02B05B673005FE3EB /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = FA4D1AD62AFF220A008E0AE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -371,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA0AA9D02B05B673005FE3EB /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA0AA9D12B05B673005FE3EB /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA0AA9D02B05B673005FE3EB /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA4D1ACD2AFF220A008E0AE6 /* Project object */;
 }

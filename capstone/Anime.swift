@@ -8,7 +8,7 @@
 import Foundation
 
 struct AnimeFeed: Decodable {
-    let results: [Anime]
+    let data: [Anime]
 }
 
 struct Anime: Decodable {
@@ -18,7 +18,7 @@ struct Anime: Decodable {
 
     // MARK: Additional properties for detail view
     let smallImageUrl: String? // Path used to create a URL to fetch the backdrop image
-    let score: Double?
+    let score: Double
 //    let releaseDate: Date?
     let malId: Decimal
 
@@ -35,4 +35,8 @@ struct Anime: Decodable {
         case score
         case malId = "mal_id"
     }
+}
+
+struct Images: Decodable {
+    
 }
