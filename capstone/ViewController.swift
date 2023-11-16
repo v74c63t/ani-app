@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Configure the cell (i.e. update UI elements like labels, image views, etc.)
 
         // Unwrap the optional poster path
-        if let imageUrl = anime.imageUrl,
+        if let imageUrl = anime.images.jpg.imageUrl,
 
             // Create a url by appending the poster path to the base url. https://developers.themoviedb.org/3/getting-started/images
            let url = URL(string: imageUrl) {
@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     private func fetchTopRatedAnime() {
 
         // URL for the TMDB Get Popular movies endpoint: https://developers.themoviedb.org/3/movies/get-popular-movies
-        let url = URL(string: "https://api.jikan.moe/v4/top/anime?limit=10")!
+        let url = URL(string: "https://api.jikan.moe/v4/top/anime")!
 
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
 

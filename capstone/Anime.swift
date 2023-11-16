@@ -14,10 +14,11 @@ struct AnimeFeed: Decodable {
 struct Anime: Decodable {
     let title: String
     let synopsis: String
-    let imageUrl: String? // Path used to create a URL to fetch the poster image
+    let images: Images
+//    let imageUrl: String // Path used to create a URL to fetch the poster image
 
     // MARK: Additional properties for detail view
-    let smallImageUrl: String? // Path used to create a URL to fetch the backdrop image
+//    let smallImageUrl: String // Path used to create a URL to fetch the backdrop image
     let score: Double
 //    let releaseDate: Date?
     let malId: Decimal
@@ -28,8 +29,9 @@ struct Anime: Decodable {
     enum CodingKeys: String, CodingKey {
         case title
         case synopsis
-        case imageUrl = "image_url"
-        case smallImageUrl = "small_image_url"
+        case images
+//        case imageUrl = "image_url"
+//        case smallImageUrl = "small_image_url"
 //        case releaseDate = "release_date"
 //        case voteAverage = "vote_average"
         case score
@@ -38,5 +40,17 @@ struct Anime: Decodable {
 }
 
 struct Images: Decodable {
-    
+    let jpg: Jpg
+    enum CodingKeys: String, CodingKey {
+        case jpg
+    }
+}
+
+struct Jpg: Decodable {
+    let imageUrl: String?
+    let smallImageUrl: String?
+    enum CodingKeys: String, CodingKey {
+        case imageUrl = "image_url"
+        case smallImageUrl = "small_image_url"
+    }
 }
