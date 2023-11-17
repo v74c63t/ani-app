@@ -139,7 +139,7 @@ class BrowseViewController: UIViewController, UITableViewDataSource {
                     print("✅ SUCCESS!!! Fetched \(genres.count) genres")
 
                     // Iterate over all movies and print out their details.
-//                    for (index, movie) in anime_shows.enumerated() {
+//                    for (index, movie) in animeList.enumerated() {
 //                        print("🍿 MOVIE \(index) ------------------")
 //                        print("Title: \(movie.title)")
 //                        print("Overview: \(movie.overview)")

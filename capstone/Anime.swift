@@ -62,8 +62,8 @@ extension Anime {
     //    - `static` means this property is "Type Property" (i.e. associated with the Movie "type", not any particular movie instance)
     //    - We can access this property anywhere like this... `Movie.favoritesKey` (i.e. Type.property)
 
-    static var favoritesKey: String {
-        return "Favorites"
+    static var starredKey: String {
+        return "Starred"
     }
     
     static var watchingKey: String {
@@ -111,13 +111,13 @@ extension Anime {
     // 2. Add the movie to the favorite movies array
     //   - Since this method is available on "instances" of a movie, we can reference the movie this method is being called on using `self`.
     // 3. Save the updated favorite movies array
-    func addToFavorites() {
+    func addToStarred() {
         // 1.
-        var favoriteAnimeList = Anime.getAnimeList(forKey: Anime.favoritesKey)
+        var starredAnimeList = Anime.getAnimeList(forKey: Anime.starredKey)
         // 2.
-        favoriteAnimeList.append(self)
+        starredAnimeList.append(self)
         // 3.
-        Anime.save(favoriteAnimeList, forKey: Anime.favoritesKey)
+        Anime.save(starredAnimeList, forKey: Anime.starredKey)
     }
     
     func addToWatching() {
@@ -134,16 +134,16 @@ extension Anime {
     //   - The `removeAll` method iterates through each movie in the array and passes the movie into a closure where it can be used to determine if it should be removed from the array.
     // 3. If a given movie passed into the closure is equal to `self` (i.e. the movie calling the method) we want to remove it. Returning a `Bool` of `true` removes the given movie.
     // 4. Save the updated favorite movies array.
-    func removeFromFavorites() {
+    func removeFromStarred() {
         // 1.
-        var favoriteAnimeList = Anime.getAnimeList(forKey: Anime.favoritesKey)
+        var starredAnimeList = Anime.getAnimeList(forKey: Anime.starredKey)
         // 2.
-        favoriteAnimeList.removeAll { anime in
+        starredAnimeList.removeAll { anime in
             // 3.
             return self == anime
         }
         // 4.
-        Anime.save(favoriteAnimeList, forKey: Anime.favoritesKey)
+        Anime.save(starredAnimeList, forKey: Anime.starredKey)
     }
     
     func removeFromWatching() {

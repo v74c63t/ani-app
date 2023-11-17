@@ -21,10 +21,10 @@ class DetailViewController: UIViewController {
         sender.isSelected = !sender.isSelected
         if sender.isSelected {
             // 1.
-            anime.addToFavorites()
+            anime.addToStarred()
         } else {
             // 2.
-            anime.removeFromFavorites()
+            anime.removeFromStarred()
         }
 //        let favorites = Anime.getAnimeList(forKey: Anime.favoritesKey)
 //        print("------Favorites------")
@@ -52,7 +52,7 @@ class DetailViewController: UIViewController {
         // ------
 
         // 1.
-        let favorites = Anime.getAnimeList(forKey: Anime.favoritesKey)
+        let favorites = Anime.getAnimeList(forKey: Anime.starredKey)
         // 2.
         if favorites.contains(anime) {
             // 3.
@@ -98,7 +98,7 @@ class DetailViewController: UIViewController {
         // ------
 
         // 1.
-        let favorites = Anime.getAnimeList(forKey: Anime.favoritesKey)
+        let favorites = Anime.getAnimeList(forKey: Anime.starredKey)
         // 2.
         if favorites.contains(anime) {
             // 3.

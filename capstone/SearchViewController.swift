@@ -12,7 +12,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var searchTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return anime_shows.count
+        return animeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -27,7 +27,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
         let cell = searchTableView.dequeueReusableCell(withIdentifier: "AnimeCell", for: indexPath) as! AnimeCell
 
         // Get the movie associated table view row
-        let anime = anime_shows[indexPath.row]
+        let anime = animeList[indexPath.row]
 
         // Configure the cell (i.e. update UI elements like labels, image views, etc.)
 
@@ -50,7 +50,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    private var anime_shows: [Anime] = []
+    private var animeList: [Anime] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // MARK: - Pass the selected movie data
@@ -60,7 +60,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
         guard let selectedIndexPath = searchTableView.indexPathForSelectedRow else { return }
 
         // Get the selected movie from the movies array using the selected index path's row
-        let selectedAnime = anime_shows[selectedIndexPath.row]
+        let selectedAnime = animeList[selectedIndexPath.row]
 
         // Get access to the detail view controller via the segue's destination. (guard to unwrap the optional)
         guard let detailViewController = segue.destination as? DetailViewController else { return }
@@ -153,14 +153,14 @@ class SearchViewController: UIViewController, UITableViewDataSource {
                     print("✅ SUCCESS!!! Fetched \(anime.count) movies")
 
                     // Iterate over all movies and print out their details.
-//                    for (index, movie) in anime_shows.enumerated() {
+//                    for (index, movie) in animeList.enumerated() {
 //                        print("🍿 MOVIE \(index) ------------------")
 //                        print("Title: \(movie.title)")
 //                        print("Overview: \(movie.overview)")
 //                    }
 
                     // Update the movies property so we can access movie data anywhere in the view controller.
-                    self?.anime_shows = anime
+                    self?.animeList = anime
                     print("🍏 Fetched and stored \(anime.count) anime")
 
                     // Prompt the table view to reload its data (i.e. call the data source methods again and re-render contents)
