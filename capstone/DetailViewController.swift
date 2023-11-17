@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if let imageUrl = anime.images.jpg.imageUrl,
+        if let imageUrl = anime.images.jpg.largeImageUrl,
 
             // Create a url by appending the poster path to the base url. https://developers.themoviedb.org/3/getting-started/images
            let url = URL(string: imageUrl) {
@@ -40,7 +40,6 @@ class DetailViewController: UIViewController {
         animeTitle.text = anime.title
         synopsis.text = anime.synopsis
         score.text = "Score: \(anime.score)"
-//        starButton.layer.cornerRadius = starButton.frame.width / 2
     }
     
 
