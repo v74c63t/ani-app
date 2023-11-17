@@ -26,12 +26,19 @@ class DetailViewController: UIViewController {
             // 2.
             anime.removeFromFavorites()
         }
-        let favorites = Anime.getAnimeList(forKey: Anime.favoritesKey)
+//        let favorites = Anime.getAnimeList(forKey: Anime.favoritesKey)
 //        print("------Favorites------")
 //        print(favorites)
     }
     @IBAction func didTapWatchingButton(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            // 1.
+            anime.addToWatching()
+        } else {
+            // 2.
+            anime.removeFromWatching()
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +61,17 @@ class DetailViewController: UIViewController {
             // 4.
             starButton.isSelected = false
         }
+        
+        let watching = Anime.getAnimeList(forKey: Anime.watchingKey)
+        // 2.
+        if watching.contains(anime) {
+            // 3.
+            watchingButton.isSelected = true
+        } else {
+            // 4.
+            watchingButton.isSelected = false
+        }
+        
 
 
         // Do any additional setup after loading the view.
@@ -70,6 +88,35 @@ class DetailViewController: UIViewController {
         animeTitle.text = anime.title
         synopsis.text = anime.synopsis
         score.text = "Score: \(anime.score)"
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        // Update the button's selected state based on the current movie's favorited status.
+        // 1. Get the array of favorite movies.
+        // 2. Check if the favorite movies array contains the current movie.
+        // 3. If so, the movie has been favorited -> Set the button to the *selected* state.
+        // 4. Otherwise, the movie is not-favorited -> Set the button to the *un-selected* state.
+        // ------
+
+        // 1.
+        let favorites = Anime.getAnimeList(forKey: Anime.favoritesKey)
+        // 2.
+        if favorites.contains(anime) {
+            // 3.
+            starButton.isSelected = true
+        } else {
+            // 4.
+            starButton.isSelected = false
+        }
+        
+        let watching = Anime.getAnimeList(forKey: Anime.watchingKey)
+        // 2.
+        if watching.contains(anime) {
+            // 3.
+            watchingButton.isSelected = true
+        } else {
+            // 4.
+            watchingButton.isSelected = false
+        }
     }
     
 

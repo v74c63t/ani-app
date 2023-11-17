@@ -11,9 +11,34 @@ import Nuke
 class ProfileViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var profileTableView: UITableView!
-    var favoriteAnimeList:[Anime] = []
+    var starredList:[Anime] = []
+    var watchingList:[Anime] = []
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteAnimeList.count
+        if section == 0 {
+            return starredList.count
+        }
+        else {
+            return watchingList.count
+        }
+//        return starredList.count
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            if starredList.count != 0 {
+                return "Starred"
+            }
+        }
+        else {
+            if watchingList.count != 0 {
+                return "Watching"
+            }
+        }
+        return nil
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,7 +53,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         let cell = profileTableView.dequeueReusableCell(withIdentifier: "AnimeCell", for: indexPath) as! AnimeCell
 
         // Get the movie associated table view row
-        let anime = favoriteAnimeList[indexPath.row]
+        let anime:Anime
+        if indexPath.section == 0{
+            anime = starredList[indexPath.row]
+        }
+        else{
+            anime = watchingList[indexPath.row]
+        }
 
         // Configure the cell (i.e. update UI elements like labels, image views, etc.)
 
@@ -60,7 +91,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         guard let selectedIndexPath = profileTableView.indexPathForSelectedRow else { return }
 
         // Get the selected movie from the movies array using the selected index path's row
-        let selectedAnime = favoriteAnimeList[selectedIndexPath.row]
+        let selectedAnime:Anime
+        if selectedIndexPath.section == 0{
+            selectedAnime = starredList[selectedIndexPath.row]
+        }
+        else {
+            selectedAnime = watchingList[selectedIndexPath.row]
+        }
 
         // Get access to the detail view controller via the segue's destination. (guard to unwrap the optional)
         guard let detailViewController = segue.destination as? DetailViewController else { return }
@@ -79,10 +116,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         // ------
 
         // 1.
-        let animeList = Anime.getAnimeList(forKey: Anime.favoritesKey)
+        let starredList = Anime.getAnimeList(forKey: Anime.favoritesKey)
         // 2.
-        self.favoriteAnimeList = animeList
+        self.starredList = starredList
         // 3.
+        let watchingList = Anime.getAnimeList(forKey: Anime.watchingKey)
+        self.watchingList = watchingList
         profileTableView.reloadData()
 
         // get the index path for the selected row

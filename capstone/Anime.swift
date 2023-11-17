@@ -66,6 +66,10 @@ extension Anime {
         return "Favorites"
     }
     
+    static var watchingKey: String {
+        return "Watching"
+    }
+    
     static func save(_ animeList: [Anime], forKey key: String) {
         // Save an array of favorite movies to UserDefaults.
         //    - Similar to the favoritesKey, we add the `static` keyword to make this a "Type Method".
@@ -115,6 +119,14 @@ extension Anime {
         // 3.
         Anime.save(favoriteAnimeList, forKey: Anime.favoritesKey)
     }
+    
+    func addToWatching() {
+        var watchingList = Anime.getAnimeList(forKey: Anime.watchingKey)
+        // 2.
+        watchingList.append(self)
+        // 3.
+        Anime.save(watchingList, forKey: Anime.watchingKey)
+    }
 
     // Removes the movie from the favorites array in UserDefaults
     // 1. Get all favorite movies from UserDefaults
@@ -132,6 +144,18 @@ extension Anime {
         }
         // 4.
         Anime.save(favoriteAnimeList, forKey: Anime.favoritesKey)
+    }
+    
+    func removeFromWatching() {
+        // 1.
+        var watchingList = Anime.getAnimeList(forKey: Anime.watchingKey)
+        // 2.
+        watchingList.removeAll { anime in
+            // 3.
+            return self == anime
+        }
+        // 4.
+        Anime.save(watchingList, forKey: Anime.watchingKey)
     }
 }
 

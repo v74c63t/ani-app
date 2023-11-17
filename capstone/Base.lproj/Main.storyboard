@@ -72,7 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Top Rated Anime" id="NRj-T7-MUD" colorLabel="IBBuiltInLabel-Blue"/>
                     <connections>
-                        <outlet property="profileTableView" destination="mvT-1F-s7j" id="cL9-Br-pMt"/>
+                        <outlet property="topRatedTableView" destination="mvT-1F-s7j" id="oXb-e0-uH9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -540,7 +540,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="47A-El-aaS"/>
                     <connections>
-                        <outlet property="profileTableView" destination="gQ0-3w-JlM" id="LdG-nm-Vbd"/>
+                        <outlet property="profileTableView" destination="gQ0-3w-JlM" id="emT-gs-NXr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfq-ee-zFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
