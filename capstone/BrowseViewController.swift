@@ -1,18 +1,17 @@
 //
-//  SearchViewController.swift
+//  BrowseViewController.swift
 //  capstone
 //
 //  Created by Vanessa Tang on 11/16/23.
 //
 
 import UIKit
-import Nuke
 
-class SearchViewController: UIViewController, UITableViewDataSource {
+class BrowseViewController: UIViewController, UITableViewDataSource {
 
-    @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var genreTableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return anime_shows.count
+        return genres.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -24,48 +23,35 @@ class SearchViewController: UIViewController, UITableViewDataSource {
         // Returns a reusable table-view cell object for the specified reuse identifier and adds it to the table. This helps to optimize table view performance as the app only needs to create enough cells to fill the screen and can reuse cells that scroll off the screen instead of creating new ones.
         // The identifier references the identifier you set for the cell previously in the storyboard.
         // The `dequeueReusableCell` method returns a regular `UITableViewCell` so we need to cast it as our custom cell (i.e. `as! MovieCell`) in order to access the custom properties you added to the cell.
-        let cell = searchTableView.dequeueReusableCell(withIdentifier: "AnimeCell", for: indexPath) as! AnimeCell
+        let cell = genreTableView.dequeueReusableCell(withIdentifier: "GenreCell", for: indexPath) as! GenreCell
 
         // Get the movie associated table view row
-        let anime = anime_shows[indexPath.row]
+        let genre = genres[indexPath.row]
 
         // Configure the cell (i.e. update UI elements like labels, image views, etc.)
-
-        // Unwrap the optional poster path
-        if let imageUrl = anime.images.jpg.imageUrl,
-
-            // Create a url by appending the poster path to the base url. https://developers.themoviedb.org/3/getting-started/images
-           let url = URL(string: imageUrl) {
-
-            // Use the Nuke library's load image function to (async) fetch and load the image from the image url.
-            Nuke.loadImage(with: url, into: cell.pic)
-        }
-
         // Set the text on the labels
-        cell.animeTitle.text = anime.title
-        cell.synopsis.text = anime.synopsis
-        cell.rating.text = "Score: \(anime.score)"
+        cell.genre.text = genre.name
 
         // Return the cell for use in the respective table view row
         return cell
     }
     
-    private var anime_shows: [Anime] = []
+    private var genres: [Genre] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // MARK: - Pass the selected movie data
 
         // Get the index path for the selected row.
         // `indexPathForSelectedRow` returns an optional `indexPath`, so we'll unwrap it with a guard.
-        guard let selectedIndexPath = searchTableView.indexPathForSelectedRow else { return }
+        guard let selectedIndexPath = genreTableView.indexPathForSelectedRow else { return }
 
         // Get the selected movie from the movies array using the selected index path's row
-        let selectedAnime = anime_shows[selectedIndexPath.row]
+        let selectedGenre = genres[selectedIndexPath.row]
 
         // Get access to the detail view controller via the segue's destination. (guard to unwrap the optional)
-        guard let detailViewController = segue.destination as? DetailViewController else { return }
+        guard let genreResultsViewController = segue.destination as? GenreResultsViewController else { return }
 
-        detailViewController.anime = selectedAnime
+        genreResultsViewController.genre = selectedGenre
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,29 +59,29 @@ class SearchViewController: UIViewController, UITableViewDataSource {
         super.viewWillAppear(animated)
 
         // get the index path for the selected row
-        if let selectedIndexPath = searchTableView.indexPathForSelectedRow {
+        if let selectedIndexPath = genreTableView.indexPathForSelectedRow {
 
             // Deselect the currently selected row
-            searchTableView.deselectRow(at: selectedIndexPath, animated: animated)
+            genreTableView.deselectRow(at: selectedIndexPath, animated: animated)
         }
 
     }
 
-//    @IBOutlet weak var topRatedTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchTableView.dataSource=self
-        fetchTopRatedAnime()
-        self.searchTableView.separatorInset = UIEdgeInsets.init(top:0, left:0, bottom:0, right:0);
+        genreTableView.dataSource=self
+        fetchGenres()
+        self.genreTableView.separatorInset = UIEdgeInsets.init(top:0, left:0, bottom:0, right:0);
         
     }
     
     // Fetches a list of popular movies from the TMDB API
-    private func fetchTopRatedAnime() {
+    private func fetchGenres() {
 
         // URL for the TMDB Get Popular movies endpoint: https://developers.themoviedb.org/3/movies/get-popular-movies
-        let url = URL(string: "https://api.jikan.moe/v4/top/anime")!
+        let url = URL(string: "https://api.jikan.moe/v4/genres/anime?filter=genres")!
 
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
 
@@ -140,17 +126,17 @@ class SearchViewController: UIViewController, UITableViewDataSource {
                 decoder.dateDecodingStrategy = .formatted(dateFormatter)
 
                 // Decode the JSON data into our custom `MovieFeed` model.
-                let animeResponse = try decoder.decode(AnimeFeed.self, from: data)
+                let genreResponse = try decoder.decode(GenreFeed.self, from: data)
 
                 // Access the array of movies
 //                print(animeResponse)
-                let anime = animeResponse.data
+                let genres = genreResponse.data
 
                 // Run any code that will update UI on the main thread.
                 DispatchQueue.main.async { [weak self] in
 
                     // We have movies! Do something with them!
-                    print("✅ SUCCESS!!! Fetched \(anime.count) movies")
+                    print("✅ SUCCESS!!! Fetched \(genres.count) genres")
 
                     // Iterate over all movies and print out their details.
 //                    for (index, movie) in anime_shows.enumerated() {
@@ -160,11 +146,11 @@ class SearchViewController: UIViewController, UITableViewDataSource {
 //                    }
 
                     // Update the movies property so we can access movie data anywhere in the view controller.
-                    self?.anime_shows = anime
-                    print("🍏 Fetched and stored \(anime.count) anime")
+                    self?.genres = genres
+                    print("🍏 Fetched and stored \(genres.count) genres")
 
                     // Prompt the table view to reload its data (i.e. call the data source methods again and re-render contents)
-                    self?.searchTableView.reloadData()
+                    self?.genreTableView.reloadData()
                 }
             } catch {
                 print("🚨 Error decoding JSON data into Movie Response: \(error.localizedDescription)")

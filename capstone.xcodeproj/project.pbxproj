@@ -17,6 +17,10 @@
 		FA4D1AE52AFF220C008E0AE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4D1AE32AFF220C008E0AE6 /* LaunchScreen.storyboard */; };
 		FAC949472B07125300458DC0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC949462B07125300458DC0 /* DetailViewController.swift */; };
 		FAC949492B07316400458DC0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC949482B07316400458DC0 /* SearchViewController.swift */; };
+		FAC9494B2B07438A00458DC0 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC9494A2B07438A00458DC0 /* BrowseViewController.swift */; };
+		FAC9494D2B07455C00458DC0 /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC9494C2B07455C00458DC0 /* GenreCell.swift */; };
+		FAC9494F2B07459F00458DC0 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC9494E2B07459F00458DC0 /* Genre.swift */; };
+		FAC949512B0747BA00458DC0 /* GenreResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC949502B0747BA00458DC0 /* GenreResultsViewController.swift */; };
 		FACE338F2B000C41006F12C0 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE338E2B000C41006F12C0 /* AnimeCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,10 @@
 		FA4D1AE62AFF220C008E0AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC949462B07125300458DC0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FAC949482B07316400458DC0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FAC9494A2B07438A00458DC0 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
+		FAC9494C2B07455C00458DC0 /* GenreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
+		FAC9494E2B07459F00458DC0 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		FAC949502B0747BA00458DC0 /* GenreResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResultsViewController.swift; sourceTree = "<group>"; };
 		FACE338E2B000C41006F12C0 /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +81,11 @@
 				FAC949462B07125300458DC0 /* DetailViewController.swift */,
 				FA0AA9C52B05AC6B005FE3EB /* Anime.swift */,
 				FA4D1ADE2AFF220A008E0AE6 /* Main.storyboard */,
+				FAC949502B0747BA00458DC0 /* GenreResultsViewController.swift */,
+				FAC9494E2B07459F00458DC0 /* Genre.swift */,
+				FAC9494A2B07438A00458DC0 /* BrowseViewController.swift */,
 				FACE338E2B000C41006F12C0 /* AnimeCell.swift */,
+				FAC9494C2B07455C00458DC0 /* GenreCell.swift */,
 				FA4D1AE12AFF220C008E0AE6 /* Assets.xcassets */,
 				FA4D1AE32AFF220C008E0AE6 /* LaunchScreen.storyboard */,
 				FA4D1AE62AFF220C008E0AE6 /* Info.plist */,
@@ -163,8 +175,12 @@
 				FA0AA9C62B05AC6B005FE3EB /* Anime.swift in Sources */,
 				FA4D1ADD2AFF220A008E0AE6 /* ViewController.swift in Sources */,
 				FAC949472B07125300458DC0 /* DetailViewController.swift in Sources */,
+				FAC9494D2B07455C00458DC0 /* GenreCell.swift in Sources */,
 				FA4D1AD92AFF220A008E0AE6 /* AppDelegate.swift in Sources */,
+				FAC949512B0747BA00458DC0 /* GenreResultsViewController.swift in Sources */,
+				FAC9494B2B07438A00458DC0 /* BrowseViewController.swift in Sources */,
 				FA4D1ADB2AFF220A008E0AE6 /* SceneDelegate.swift in Sources */,
+				FAC9494F2B07459F00458DC0 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
