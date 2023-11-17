@@ -14,7 +14,7 @@ Original App Design Project - README
 
 ### Description
 
-This app allows users to browse anime to find a show that they find interesting and want to watch. Users can view more detailed information about an anime through a detailed view where they can also favorite or mark a show as watching/completed. All the watching/completed shows will be compiled in a list for the users to easily view with favorited shows pushed to the top of the list. Users can also view the top rated anime in a separate page.
+This app allows users to browse anime to find a show that they find interesting and want to watch. Users can view more detailed information about an anime through a detailed view where they can also favorite or mark a show as watching. All the watching shows will be compiled in a list for the users to easily view with starred shows pushed to the top of the list. Users can also view the top rated anime in a separate page.
 
 ### App Evaluation
 
@@ -37,7 +37,7 @@ This app allows users to browse anime to find a show that they find interesting 
 * Clicking on a table item will bring the user to a detailed view with more information about the show
 * Detailed view will allow users to favorite a show or mark it as watching/complete
 * There is a page that allows users to view top rated shows in a table view
-* Users should be able to view their watch list and complete list with favorite shows being pushed towards the top of each respective list
+* Users should be able to view their watching list and starred list
 
 **Optional Nice-to-have Stories**
 
@@ -46,6 +46,7 @@ This app allows users to browse anime to find a show that they find interesting 
 * Allow users to click on genres on show detail page to go to search page for that genre
 * Have a search page that allows users to search for shows with some query
 * Search result page should include some pagination
+* Users should be able to view their watch list and complete list with favorite shows being pushed towards the top of each respective list
 
 ### 2. Screen Archetypes
 
@@ -61,8 +62,9 @@ This app allows users to browse anime to find a show that they find interesting 
 * Includes more detailed information about the show (all the genres, studio, etc)
 - [x] Top Rated Screen
 * There is a page that allows users to view top rated shows in a table view
-- [ ] Watch/Complete List Screen
-* Users should be able to view their watch list and complete list with favorite shows being pushed towards the top of each respective list
+- [x] Anime List Screen
+* ~~Users should be able to view their watch list and complete list with favorite shows being pushed towards the top of each respective list~~
+* Users should be able to view their watching list and starred list
 
 ### 3. Navigation
 
