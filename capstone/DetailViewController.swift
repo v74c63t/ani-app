@@ -19,12 +19,42 @@ class DetailViewController: UIViewController {
     var anime:Anime!
     @IBAction func didTapStarButton(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+            // 1.
+            anime.addToFavorites()
+        } else {
+            // 2.
+            anime.removeFromFavorites()
+        }
+        let favorites = Anime.getAnimeList(forKey: Anime.favoritesKey)
+//        print("------Favorites------")
+//        print(favorites)
     }
     @IBAction func didTapWatchingButton(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // Update the button's selected state based on the current movie's favorited status.
+        // 1. Get the array of favorite movies.
+        // 2. Check if the favorite movies array contains the current movie.
+        // 3. If so, the movie has been favorited -> Set the button to the *selected* state.
+        // 4. Otherwise, the movie is not-favorited -> Set the button to the *un-selected* state.
+        // ------
+
+        // 1.
+        let favorites = Anime.getAnimeList(forKey: Anime.favoritesKey)
+        // 2.
+        if favorites.contains(anime) {
+            // 3.
+            starButton.isSelected = true
+        } else {
+            // 4.
+            starButton.isSelected = false
+        }
+
 
         // Do any additional setup after loading the view.
         if let imageUrl = anime.images.jpg.largeImageUrl,

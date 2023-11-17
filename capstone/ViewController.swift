@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Returns a reusable table-view cell object for the specified reuse identifier and adds it to the table. This helps to optimize table view performance as the app only needs to create enough cells to fill the screen and can reuse cells that scroll off the screen instead of creating new ones.
         // The identifier references the identifier you set for the cell previously in the storyboard.
         // The `dequeueReusableCell` method returns a regular `UITableViewCell` so we need to cast it as our custom cell (i.e. `as! MovieCell`) in order to access the custom properties you added to the cell.
-        let cell = topRatedTableView.dequeueReusableCell(withIdentifier: "AnimeCell", for: indexPath) as! AnimeCell
+        let cell = profileTableView.dequeueReusableCell(withIdentifier: "AnimeCell", for: indexPath) as! AnimeCell
 
         // Get the movie associated table view row
         let anime = anime_shows[indexPath.row]
@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
         // Get the index path for the selected row.
         // `indexPathForSelectedRow` returns an optional `indexPath`, so we'll unwrap it with a guard.
-        guard let selectedIndexPath = topRatedTableView.indexPathForSelectedRow else { return }
+        guard let selectedIndexPath = profileTableView.indexPathForSelectedRow else { return }
 
         // Get the selected movie from the movies array using the selected index path's row
         let selectedAnime = anime_shows[selectedIndexPath.row]
@@ -71,21 +71,21 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewWillAppear(animated)
 
         // get the index path for the selected row
-        if let selectedIndexPath = topRatedTableView.indexPathForSelectedRow {
+        if let selectedIndexPath = profileTableView.indexPathForSelectedRow {
 
             // Deselect the currently selected row
-            topRatedTableView.deselectRow(at: selectedIndexPath, animated: animated)
+            profileTableView.deselectRow(at: selectedIndexPath, animated: animated)
         }
 
     }
 
-    @IBOutlet weak var topRatedTableView: UITableView!
+    @IBOutlet weak var profileTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        topRatedTableView.dataSource=self
+        profileTableView.dataSource=self
         fetchTopRatedAnime()
-        self.topRatedTableView.separatorInset = UIEdgeInsets.init(top:0, left:0, bottom:0, right:0);
+        self.profileTableView.separatorInset = UIEdgeInsets.init(top:0, left:0, bottom:0, right:0);
         
     }
     
@@ -162,7 +162,7 @@ class ViewController: UIViewController, UITableViewDataSource {
                     print("🍏 Fetched and stored \(anime.count) anime")
 
                     // Prompt the table view to reload its data (i.e. call the data source methods again and re-render contents)
-                    self?.topRatedTableView.reloadData()
+                    self?.profileTableView.reloadData()
                 }
             } catch {
                 print("🚨 Error decoding JSON data into Movie Response: \(error.localizedDescription)")

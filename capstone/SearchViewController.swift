@@ -81,7 +81,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
 
     }
 
-//    @IBOutlet weak var topRatedTableView: UITableView!
+//    @IBOutlet weak var profileTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         

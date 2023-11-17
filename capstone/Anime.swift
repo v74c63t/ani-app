@@ -126,9 +126,9 @@ extension Anime {
         // 1.
         var favoriteAnimeList = Anime.getAnimeList(forKey: Anime.favoritesKey)
         // 2.
-        favoriteAnimeList.removeAll { movie in
+        favoriteAnimeList.removeAll { anime in
             // 3.
-            return self == movie
+            return self == anime
         }
         // 4.
         Anime.save(favoriteAnimeList, forKey: Anime.favoritesKey)

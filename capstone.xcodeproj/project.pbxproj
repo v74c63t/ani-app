@@ -22,6 +22,7 @@
 		FAC9494F2B07459F00458DC0 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC9494E2B07459F00458DC0 /* Genre.swift */; };
 		FAC949512B0747BA00458DC0 /* GenreResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC949502B0747BA00458DC0 /* GenreResultsViewController.swift */; };
 		FACE338F2B000C41006F12C0 /* AnimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE338E2B000C41006F12C0 /* AnimeCell.swift */; };
+		FAF279B72B0818D800616F00 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF279B62B0818D800616F00 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		FAC9494E2B07459F00458DC0 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		FAC949502B0747BA00458DC0 /* GenreResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResultsViewController.swift; sourceTree = "<group>"; };
 		FACE338E2B000C41006F12C0 /* AnimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeCell.swift; sourceTree = "<group>"; };
+		FAF279B62B0818D800616F00 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		FA4D1ACC2AFF220A008E0AE6 = {
 			isa = PBXGroup;
 			children = (
+				FAF279B62B0818D800616F00 /* ProfileViewController.swift */,
 				FA4D1AD72AFF220A008E0AE6 /* capstone */,
 				FA4D1AD62AFF220A008E0AE6 /* Products */,
 			);
@@ -176,6 +179,7 @@
 				FA4D1ADD2AFF220A008E0AE6 /* ViewController.swift in Sources */,
 				FAC949472B07125300458DC0 /* DetailViewController.swift in Sources */,
 				FAC9494D2B07455C00458DC0 /* GenreCell.swift in Sources */,
+				FAF279B72B0818D800616F00 /* ProfileViewController.swift in Sources */,
 				FA4D1AD92AFF220A008E0AE6 /* AppDelegate.swift in Sources */,
 				FAC949512B0747BA00458DC0 /* GenreResultsViewController.swift in Sources */,
 				FAC9494B2B07438A00458DC0 /* BrowseViewController.swift in Sources */,

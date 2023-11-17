@@ -72,7 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Top Rated Anime" id="NRj-T7-MUD" colorLabel="IBBuiltInLabel-Blue"/>
                     <connections>
-                        <outlet property="topRatedTableView" destination="mvT-1F-s7j" id="cL9-Br-pMt"/>
+                        <outlet property="profileTableView" destination="mvT-1F-s7j" id="cL9-Br-pMt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -478,12 +478,12 @@
         <!--Profile-->
         <scene sceneID="foG-pJ-78S">
             <objects>
-                <viewController id="5O3-GQ-pYK" sceneMemberID="viewController">
+                <viewController id="5O3-GQ-pYK" customClass="ProfileViewController" customModule="capstone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BpT-VI-6Wd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gQ0-3w-JlM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="226" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gQ0-3w-JlM">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -539,6 +539,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="47A-El-aaS"/>
+                    <connections>
+                        <outlet property="profileTableView" destination="gQ0-3w-JlM" id="LdG-nm-Vbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfq-ee-zFS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
