@@ -1,7 +1,7 @@
 Original App Design Project - README 
 ===
 
-# AnimeApp (name tbd)
+# AniApp (name tbd)
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Original App Design Project - README
 
 ### Description
 
-This app allows users to search and browse anime to find a show that they find interesting and want to watch. Users can view more detailed information about an anime through a detailed view where they can also favorite or mark a show as watching/completed. All the watching/completed shows will be compiled in a list for the users to easily view with favorited shows pushed to the top of the list. Users can also view the top rated anime in a separate page.
+This app allows users to browse anime to find a show that they find interesting and want to watch. Users can view more detailed information about an anime through a detailed view where they can also favorite or mark a show as watching/completed. All the watching/completed shows will be compiled in a list for the users to easily view with favorited shows pushed to the top of the list. Users can also view the top rated anime in a separate page.
 
 ### App Evaluation
 
@@ -31,11 +31,9 @@ This app allows users to search and browse anime to find a show that they find i
 
 **Required Must-have Stories**
 
-* Have a search page that allows users to search for shows with some query
-* Have a list of genres users can browse by (should be on the main search page)
+* Have a list of genres users can browse by 
 * Entering and searching by a query or clicking on a genre will bring the user to the search result page
 * Search result page should show a list of shows in a table view with some brief information about the show (picture, title, description, rating)
-* Search result page should include some pagination
 * Clicking on a table item will bring the user to a detailed view with more information about the show
 * Detailed view will allow users to favorite a show or mark it as watching/complete
 * There is a page that allows users to view top rated shows in a table view
@@ -46,18 +44,19 @@ This app allows users to search and browse anime to find a show that they find i
 * Allow users to adjust the sorting criteria/number of shows shown in each page through settings on search page
 * Add all features for manga as well
 * Allow users to click on genres on show detail page to go to search page for that genre
+* Have a search page that allows users to search for shows with some query
+* Search result page should include some pagination
 
 ### 2. Screen Archetypes
 
-- [ ] Main Search Screen
-* Have a search page that allows users to search for shows with some query
+- [x] Main Search Screen
+* ~~Have a search page that allows users to search for shows with some query~~
 * Have a list of genres users can browse by
 * Entering and searching by a query or clicking on a genre will bring the user to the search result page
-- [ ] Search Result Screen
+- [x] Search Result Screen
 * Search result page should show a list of shows in a table view with some brief information about the show (picture, title, description, rating)
-* Search result page should include some pagination
 * Clicking on a table item will bring the user to a detailed view with more information about the show
-- [ ] Detailed View
+- [x] Detailed View
 * Detailed view will allow users to favorite a show or mark it as watching/complete
 * Includes more detailed information about the show (all the genres, studio, etc)
 - [x] Top Rated Screen
