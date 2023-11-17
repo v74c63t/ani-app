@@ -41,6 +41,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         return nil
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create, configure and return a table view cell for the given row (i.e. `indexPath.row`)
 
@@ -135,7 +136,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        profileTableView.sectionIndexColor = UIColor.white
         profileTableView.dataSource=self
         self.profileTableView.separatorInset = UIEdgeInsets.init(top:0, left:0, bottom:0, right:0);
         
