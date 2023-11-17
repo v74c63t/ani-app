@@ -14,7 +14,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var animeTitle: UILabel!
     @IBOutlet weak var synopsis: UITextView!
     @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var watchingButton: UIButton!
     var anime:Anime!
+    @IBAction func didTapStarButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    @IBAction func didTapWatchingButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +40,7 @@ class DetailViewController: UIViewController {
         animeTitle.text = anime.title
         synopsis.text = anime.synopsis
         score.text = "Score: \(anime.score)"
+//        starButton.layer.cornerRadius = starButton.frame.width / 2
     }
     
 

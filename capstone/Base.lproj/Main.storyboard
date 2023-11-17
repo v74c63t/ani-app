@@ -333,6 +333,34 @@
                                 <rect key="frame" x="16" y="103" width="361" height="356"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXS-Mx-3OH">
+                                <rect key="frame" x="239" y="409" width="131" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.08242227882" green="0.1177347973" blue="0.1098037139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Watching" image="checkmark.circle" catalog="system">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <state key="selected" title=" Watching" image="checkmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapWatchingButton:" destination="OEC-mr-7IJ" eventType="touchUpInside" id="RBf-8f-x0q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDE-jP-iWZ">
+                                <rect key="frame" x="326" y="113" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.08242227882" green="0.1177347973" blue="0.1098037139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="0.95881346180000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="star" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="27"/>
+                                </state>
+                                <state key="selected" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapStarButton:" destination="OEC-mr-7IJ" eventType="touchUpInside" id="yCP-Zv-HHl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="679-Pb-XUi"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -342,7 +370,9 @@
                         <outlet property="animeTitle" destination="9VW-Dp-JNg" id="Kck-lz-Wnl"/>
                         <outlet property="pic" destination="khD-Cd-yx5" id="iFl-yn-3jT"/>
                         <outlet property="score" destination="3tj-04-icl" id="yeE-ZF-82z"/>
+                        <outlet property="starButton" destination="wDE-jP-iWZ" id="o8v-Sg-1q0"/>
                         <outlet property="synopsis" destination="tir-5p-0gZ" id="FbR-XQ-Xj4"/>
+                        <outlet property="watchingButton" destination="hXS-Mx-3OH" id="tad-Al-Gvq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Tq-bi-jb8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -379,6 +409,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gU2-XB-Vgn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eDw-Ac-Pzc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -449,10 +480,17 @@
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.7265109461" green="1" blue="0.96588371240000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
     <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="trophy.fill" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
