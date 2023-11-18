@@ -1,7 +1,7 @@
 Original App Design Project - README 
 ===
 
-# AniApp (name tbd)
+# AniApp
 
 ## Table of Contents
 
@@ -127,5 +127,8 @@ This app allows users to browse anime to find a show that they find interesting 
 * API: [Jikan](https://docs.api.jikan.moe/)
 * Endpoints:
   * /top/anime
+   * Used in Top Rated Anime View
   * /genres/anime?filter=genres
+   * Used in Browse by Genre View
   * /anime?genres={genre_malId}&order_by=score&sort=desc
+   * Used in Genre Results View
