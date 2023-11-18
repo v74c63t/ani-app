@@ -27,7 +27,7 @@
 
 /* Begin PBXFileReference section */
 		FA0AA9C52B05AC6B005FE3EB /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
-		FA4D1AD52AFF220A008E0AE6 /* capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4D1AD52AFF220A008E0AE6 /* AniApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4D1AD82AFF220A008E0AE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA4D1ADA2AFF220A008E0AE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA4D1ADC2AFF220A008E0AE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		FA4D1AD62AFF220A008E0AE6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA4D1AD52AFF220A008E0AE6 /* capstone.app */,
+				FA4D1AD52AFF220A008E0AE6 /* AniApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +116,7 @@
 				FA0AA9D12B05B673005FE3EB /* Nuke */,
 			);
 			productName = capstone;
-			productReference = FA4D1AD52AFF220A008E0AE6 /* capstone.app */;
+			productReference = FA4D1AD52AFF220A008E0AE6 /* AniApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -350,7 +350,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VanessaTang.capstone;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AniApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -378,7 +378,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VanessaTang.capstone;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AniApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
