@@ -84,6 +84,8 @@ This app allows users to browse anime to find a show that they find interesting 
 - [x] Watch/Complete List Screen
 * Clicking on show goes to show detailed view
 
+## Walkthrough
+
 ## Wireframes
 
 [Add picture of your hand sketched wireframes in this section]
@@ -99,10 +101,29 @@ This app allows users to browse anime to find a show that they find interesting 
 
 ### Models
 
-[Add table of models]
+<!-- [Add table of models] -->
+* Anime
+  * malId
+  * title
+  * synopsis
+  * score
+  * images
+    * jpg
+      * smallImageUrl
+      * mediumImageUrl
+      * largeImageUrl
+     
+* Genre
+  * malId
+  * name
 
 ### Networking
 
-- [Add list of network requests by screen ]
+<!-- - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- [OPTIONAL: List endpoints if using existing API such as Yelp] -->
+* API: [Jikan](https://docs.api.jikan.moe/)
+* Endpoints:
+  * /top/anime
+  * /genres/anime?filter=genres
+  * /anime?genres={genre_malId}&order_by=score&sort=desc
