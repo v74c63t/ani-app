@@ -86,7 +86,11 @@ This app allows users to browse anime to find a show that they find interesting 
 
 ## Walkthrough
 
+### Unit 9
 <img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+### Unit 8
+<img src='update.gif' title='Video Update' width='' alt='Video Update' />
 
 ## Wireframes
 
@@ -127,8 +131,8 @@ This app allows users to browse anime to find a show that they find interesting 
 * API: [Jikan](https://docs.api.jikan.moe/)
 * Endpoints:
   * /top/anime
-   * Used in Top Rated Anime View
+    * Used in Top Rated Anime View
   * /genres/anime?filter=genres
-   * Used in Browse by Genre View
+    * Used in Browse by Genre View
   * /anime?genres={genre_malId}&order_by=score&sort=desc
-   * Used in Genre Results View
+    * Used in Genre Results View
