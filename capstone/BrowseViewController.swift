@@ -136,18 +136,18 @@ class BrowseViewController: UIViewController, UITableViewDataSource {
                 DispatchQueue.main.async { [weak self] in
 
                     // We have movies! Do something with them!
-                    print("✅ SUCCESS!!! Fetched \(genres.count) genres")
-
-                    // Iterate over all movies and print out their details.
-//                    for (index, movie) in animeList.enumerated() {
-//                        print("🍿 MOVIE \(index) ------------------")
-//                        print("Title: \(movie.title)")
-//                        print("Overview: \(movie.overview)")
-//                    }
-
-                    // Update the movies property so we can access movie data anywhere in the view controller.
+//                    print("✅ SUCCESS!!! Fetched \(genres.count) genres")
+//
+//                    // Iterate over all movies and print out their details.
+////                    for (index, movie) in animeList.enumerated() {
+////                        print("🍿 MOVIE \(index) ------------------")
+////                        print("Title: \(movie.title)")
+////                        print("Overview: \(movie.overview)")
+////                    }
+//
+//                    // Update the movies property so we can access movie data anywhere in the view controller.
                     self?.genres = genres
-                    print("🍏 Fetched and stored \(genres.count) genres")
+//                    print("🍏 Fetched and stored \(genres.count) genres")
 
                     // Prompt the table view to reload its data (i.e. call the data source methods again and re-render contents)
                     self?.genreTableView.reloadData()

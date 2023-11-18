@@ -148,18 +148,18 @@ class ViewController: UIViewController, UITableViewDataSource {
                 DispatchQueue.main.async { [weak self] in
 
                     // We have movies! Do something with them!
-                    print("✅ SUCCESS!!! Fetched \(anime.count) anime")
-
-                    // Iterate over all movies and print out their details.
-//                    for (index, movie) in animeList.enumerated() {
-//                        print("🍿 MOVIE \(index) ------------------")
-//                        print("Title: \(movie.title)")
-//                        print("Overview: \(movie.overview)")
-//                    }
-
-                    // Update the movies property so we can access movie data anywhere in the view controller.
+//                    print("✅ SUCCESS!!! Fetched \(anime.count) anime")
+//
+//                    // Iterate over all movies and print out their details.
+////                    for (index, movie) in animeList.enumerated() {
+////                        print("🍿 MOVIE \(index) ------------------")
+////                        print("Title: \(movie.title)")
+////                        print("Overview: \(movie.overview)")
+////                    }
+//
+//                    // Update the movies property so we can access movie data anywhere in the view controller.
                     self?.animeList = anime
-                    print("🍏 Fetched and stored \(anime.count) anime")
+//                    print("🍏 Fetched and stored \(anime.count) anime")
 
                     // Prompt the table view to reload its data (i.e. call the data source methods again and re-render contents)
                     self?.topRatedTableView.reloadData()

@@ -60,7 +60,6 @@
 		FA4D1ACC2AFF220A008E0AE6 = {
 			isa = PBXGroup;
 			children = (
-				FAF279B62B0818D800616F00 /* ProfileViewController.swift */,
 				FA4D1AD72AFF220A008E0AE6 /* capstone */,
 				FA4D1AD62AFF220A008E0AE6 /* Products */,
 			);
@@ -82,6 +81,7 @@
 				FA4D1ADC2AFF220A008E0AE6 /* ViewController.swift */,
 				FAC949482B07316400458DC0 /* SearchViewController.swift */,
 				FAC949462B07125300458DC0 /* DetailViewController.swift */,
+				FAF279B62B0818D800616F00 /* ProfileViewController.swift */,
 				FA0AA9C52B05AC6B005FE3EB /* Anime.swift */,
 				FA4D1ADE2AFF220A008E0AE6 /* Main.storyboard */,
 				FAC949502B0747BA00458DC0 /* GenreResultsViewController.swift */,
