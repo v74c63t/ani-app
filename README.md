@@ -76,12 +76,12 @@ This app allows users to browse anime to find a show that they find interesting 
 
 **Flow Navigation** (Screen to Screen)
 
-- [ ] Top Rated Shows
+- [x] Top Rated Shows
 * Clicking on show goes to show detailed view
-- [ ] Search/Browse
+- [x] Search/Browse
 * Clicking on search or a genre goes to search result page
 * Clicking show goes to show detailed view
-- [ ] Watch/Complete List Screen
+- [x] Watch/Complete List Screen
 * Clicking on show goes to show detailed view
 
 ## Wireframes
