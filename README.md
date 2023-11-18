@@ -86,6 +86,8 @@ This app allows users to browse anime to find a show that they find interesting 
 
 ## Walkthrough
 
+<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 ## Wireframes
 
 [Add picture of your hand sketched wireframes in this section]
