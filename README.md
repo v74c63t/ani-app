@@ -109,19 +109,19 @@ This app allows users to browse anime to find a show that they find interesting 
 
 <!-- [Add table of models] -->
 * Anime
-  * malId
-  * title
-  * synopsis
-  * score
+  * malId: Int
+  * title: String
+  * synopsis: String
+  * score: Float
   * images
     * jpg
-      * smallImageUrl
-      * mediumImageUrl
-      * largeImageUrl
+      * smallImageUrl: String
+      * mediumImageUrl: String?
+      * largeImageUrl: String
      
 * Genre
-  * malId
-  * name
+  * malId: Int
+  * name: String
 
 ### Networking
 
