@@ -86,6 +86,10 @@ This app allows users to browse anime to find a show that they find interesting 
 
 ## Walkthrough
 
+### Unit 10
+
+- Since I had to finish the core functionalities for demo day, I had all of those finished by Unit 9. I have not made any other updates to this since then. Refer to the Unit 9 section for the video walkthrough of the app.
+
 ### Unit 9
 <img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
