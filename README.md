@@ -107,7 +107,7 @@ This app allows users to browse anime to find a show that they find interesting 
 
 ## Schema 
 
-[This section will be completed in Unit 9]
+<!-- [This section will be completed in Unit 9] -->
 
 ### Models
 
